@@ -1,23 +1,9 @@
 import { useState } from "react";
 
 
-function UserInput() {
-    const [userInput, setUserInput] = useState({
-        initialInvestment: 10000,
-        annualInvestment: 1200,
-        expectedReturn:6,
-        duration:10
-    })
+function UserInput(props) {
 
 
-    function handelChange(inputIdentifier, newValue) {
-        setUserInput(prevUserInput => {
-            return {
-                ...prevUserInput,
-                [inputIdentifier]: newValue
-            }
-        })
-    }
 
 
     return(
@@ -25,19 +11,19 @@ function UserInput() {
             <div className="input-gorup">
                 <p>
                     <label htmlFor="">Initial Investment`</label>
-                    <input type="text" value={userInput.initialInvestment} required onChange={(event) => handelChange("initialInvestment", event.target.value)}/>
+                    <input type="text" value={props.userInput.initialInvestment} required onChange={(event) => props.onChange("initialInvestment", event.target.value)}/>
                 </p>
                 <p>
                     <label htmlFor="">Annual Investment</label>
-                    <input type="text" required value={userInput.annualInvestment}  onChange={(event) => handelChange("annualInvestment", event.target.value)} />
+                    <input type="text" required value={props.userInput.annualInvestment}  onChange={(event) => props.onchange("annualInvestment", event.target.value)} />
                 </p>
                 <p>
                     <label htmlFor="">Expected Return</label>
-                    <input type="text" required  value={userInput.expectedReturn}  onChange={(event) => handelChange("expectedReturn", event.target.value)}/>
+                    <input type="text" required  value={props.userInput.expectedReturn}  onChange={(event) => props.onChange("expectedReturn", event.target.value)}/>
                 </p>
                 <p>
                     <label htmlFor="">Duration</label>
-                    <input type="text" required value={userInput.duration}  onChange={(event) => handelChange("duration", event.target.value)}/>
+                    <input type="text" required value={props.userInput.duration}  onChange={(event) => props.onChange("duration", event.target.value)}/>
                 </p>
             </div>
         </section>
