@@ -11,19 +11,19 @@ function UserInput(props) {
             <div className="input-gorup">
                 <p>
                     <label htmlFor="">Initial Investment`</label>
-                    <input type="text" value={props.userInput.initialInvestment} required onChange={(event) => props.onChange("initialInvestment", event.target.value)}/>
+                    <input type="number" value={props.userInput.initialInvestment} required onChange={(event) => props.onChange("initialInvestment", event.target.value)}/>
                 </p>
                 <p>
                     <label htmlFor="">Annual Investment</label>
-                    <input type="text" required value={props.userInput.annualInvestment}  onChange={(event) => props.onchange("annualInvestment", event.target.value)} />
+                    <input type="number" required value={props.userInput.annualInvestment}  onChange={(event) => props.onChange("annualInvestment", event.target.value)} />
                 </p>
                 <p>
                     <label htmlFor="">Expected Return</label>
-                    <input type="text" required  value={props.userInput.expectedReturn}  onChange={(event) => props.onChange("expectedReturn", event.target.value)}/>
+                    <input type="number" required  value={props.userInput.expectedReturn}  onChange={(event) => props.onChange("expectedReturn", event.target.value)}/>
                 </p>
                 <p>
                     <label htmlFor="">Duration</label>
-                    <input type="text" required value={props.userInput.duration}  onChange={(event) => props.onChange("duration", event.target.value)}/>
+                    <input type="number" required value={props.userInput.duration}  onChange={(event) => props.onChange("duration", event.target.value)}/>
                 </p>
             </div>
         </section>

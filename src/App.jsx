@@ -11,6 +11,8 @@ function App() {
     duration:10 
   })
 
+  // const inputIsValid = 
+
 
   function handelChange(inputIdentifier, newValue) {
     setUserInput(function (prevUserInput) {
