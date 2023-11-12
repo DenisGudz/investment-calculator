@@ -13,10 +13,10 @@ function App() {
 
 
   function handelChange(inputIdentifier, newValue) {
-    setUserInput(prevUserInput => {
+    setUserInput(function (prevUserInput) {
         return {
             ...prevUserInput,
-            [inputIdentifier]: newValue
+            [inputIdentifier]: +newValue
        }
    })
   }

@@ -1,7 +1,20 @@
+import { calculateInvestmentResults } from "../util/investment"
+
 function Results(props) {
-    console.log(props.input)
-    return(
-        <p>Results</p>
+    const resultData = calculateInvestmentResults(props.input)
+
+    console.log(resultData)
+
+    return (
+        <table id="result">
+            <thead>
+                <tr>
+                    <th>Year</th>
+                    <th>investment Value</th>
+                    <th>interest (Year)</th>
+                </tr>
+            </thead>
+        </table>
     )
 }
 
